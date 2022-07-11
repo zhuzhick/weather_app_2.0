@@ -5,4 +5,44 @@
 	padding: 16px;
 	min-height: 640px;
 	max-height: 95vh;
+	font-family: 'Comfortaa', cursive;;
+}
+
+.currentTime {
+	font-size: 36px;
+}
+
+#degreeToggleBtn {
+	float: right;
+	font-size: 28px;
+	padding: 4px;
+}
+
+.searchFormBtn {
+	position: relative;
+}
+
+.searchForm i {
+	position: absolute;
+	left: 15px;
+	top: 16px;
+}
+
+
+.cityData {
+	padding: 12px;
+}
+
+.userCity {
+	font-size: 48px;
+	font-weight: 700;
+}
+
+.currentTemp {
+	font-size: 96px;
+	font-weight: 900;
+}
+
+.currentWeather {
+	font-weight: 700;
 }

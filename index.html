@@ -17,6 +17,10 @@
 			integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5"
 			crossorigin="anonymous"
 		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 	</head>
 
 <body>
@@ -30,7 +34,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="degreeToggle">
-						<button class="degreeToggleBtn">Convert to F°</button>
+						<button id="degreeToggleBtn" class="btn">Convert to F°</button>
 					</div>
 				</div>
 			</div>	
@@ -38,8 +42,10 @@
 		<div class="row">
 			<div class="col-md-12">	
 				<div class="searchForm">
-					<input type="search" placeholder="Search your city here"/>
-					<input type="submit" value="🔎"/>
+					<input class="btn searchFormBtn" type="submit" value="🚩"><i class="fa-solid fa-location-dot"></i>
+					<input class="btn" type="search" placeholder="Search your city here"/>
+					<input class="btn searchFormBtn" type="submit" value="🔎"/><i class="fa-solid fa-magnifying-glass"></i>
+					<hr>
 				</div>
 			</div>
 		</div>
@@ -79,8 +85,8 @@
 		<!--Week forecast-->
 		<div class="row">
 			<h2>5 Day Forecast</h2>
-			<hr>
 			<div class="col-md-12">
+				<hr>
 				<div class="dayForecast">
 					<div class="row">
 						<div class="col-md-3 dayForecastHeader">
