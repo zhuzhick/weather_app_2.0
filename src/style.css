@@ -1,0 +1,8 @@
+#weatherApp {
+	width: 480px;
+	background-color: #ffff40;
+	margin: 24px auto;
+	padding: 16px;
+	min-height: 640px;
+	max-height: 95vh;
+}
