@@ -1,33 +1,47 @@
+p {
+	margin: 0;
+	padding: 0;
+}
+
 #weatherApp {
 	width: 480px;
+	min-width: 480px;
 	background-color: #ffff40;
-	margin: 24px auto;
+	margin: 20px auto;
 	padding: 16px;
 	min-height: 640px;
-	max-height: 95vh;
+	max-height: 98vh;
 	font-family: 'Comfortaa', cursive;;
 }
 
+
 .currentTime {
-	font-size: 36px;
+	font-size: 30px;
 }
 
 #degreeToggleBtn {
 	float: right;
-	font-size: 28px;
+	font-size: 24px;
 	padding: 4px;
 }
 
-.searchFormBtn {
-	position: relative;
+.searchFormInput {
+	border: none;
+	background-color: transparent;
+	padding: 10px;
+
 }
 
-.searchForm i {
-	position: absolute;
-	left: 15px;
-	top: 16px;
+.searchFormInput:active{
+	border-bottom: solid 1px #000;
+	background-color: #ffffff;
 }
 
+
+
+.searchFormInput:hover {
+	border: none;
+}
 
 .cityData {
 	padding: 12px;
@@ -36,13 +50,65 @@
 .userCity {
 	font-size: 48px;
 	font-weight: 700;
+	padding: 0;
+	margin: 0;	
+}
+
+.currentDay {
+	padding: 0;
+	margin: 0;
+}
+
+.currentDate {
+	padding: 0;
+	margin: 0;
 }
 
 .currentTemp {
 	font-size: 96px;
 	font-weight: 900;
+	padding: 0;
+	margin: 0;	
 }
 
-.currentWeather {
+.currentWeatherInfo {
 	font-weight: 700;
+	font-size: 28px;
+	margin: 0;
+	padding: 0;
+}
+
+.currentRain, .currentHumidity {
+	text-align: right;
+}
+
+
+
+.weekForecastHeader {
+	text-align: right;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.dayForecast td {
+	padding: 4px;
+}
+
+.dayForecastHeaderDay{
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.dayForecastHeaderDate {
+	font-size: 12px;
+}
+
+.dayForecastOutput {
+	text-align: center;
+	font-size: 18px;
+}
+
+.fa-solid {
+	float: right;
+	font-size: 18px;
 }
