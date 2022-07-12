@@ -39,14 +39,15 @@
 				</div>
 			</div>	
 		<!--Search form-->
-		<div class="row">
-			<div class="col-md-12">	
-				<div class="searchForm">
-					<input class="btn" type="submit" value="🚩">
-					<input class="searchFormInput" type="search" placeholder="Search your city here"/>
-					<input class="btn" type="submit" value="🔎"/>
-					<hr>
-				</div>
+		<div class="row">			
+			<div class="col-md-2 btnLocation">
+				<button id="btnLocation" class="btn"><i class="fa-solid fa-location-dot"></i></button>		
+			</div>
+			<div class="col-md-6 searchFormField">	
+				<input id="searchFormInput" type="search" placeholder="Search your city here"/>
+			</div>
+			<div class="col-md-2 btnSearchCity">
+				<button id="btnSearchCity" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
 			</div>
 		</div>
 		<!--Today forecast-->
@@ -85,128 +86,129 @@
 		<!--Week forecast-->
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="weekForecastHeader">5 Day Forecast</h2>
 				<hr>
-				<table class="table dayForecast">
-					<tr>
-						<td class="dayForecastHeader">
+				<div class="weekForecastOutput">
+					<div class="row dayForecastOutput">
+						<div class="col-md-3">
 							<h3 class="dayForecastHeaderDay">Wednesday</h3>
 							<h4 class="dayForecastHeaderDate">13 July, 2022</h4>
-						</td>
-						<td><i class="fa-solid fa-temperature-half"></i></td>
-						<td>
+						</div>
+						<div class="col-md-1 dayForecastIco">
+							<i class="fa-solid fa-temperature-half"></i>
+						</div>
+						<div class="col-md-2">
 							<p class="dayForecastOutput tempOutput"> 23 C°</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-wind"></i>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-2">
 							<p class="dayForecastOutput windOutput">14 km/h</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-umbrella"></i>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-2">
 							<p class="dayForecastOutput rainOutput">24%</p>
-						</td>
-					</tr>
-				</table>
-				<table class="table dayForecast">
-					<tr>
-						<td class="dayForecastHeader">
+						</div>
+					</div>
+					<div class="row dayForecastOutput">
+						<div class="col-md-3">
 							<h3 class="dayForecastHeaderDay">Thursday</h3>
 							<h4 class="dayForecastHeaderDate">14 July, 2022</h4>
-						</td>
-						<td><i class="fa-solid fa-temperature-half"></i></td>
-						<td>
-							<p class="dayForecastOutput tempOutput"> 28 C°</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-1 dayForecastIco">
+							<i class="fa-solid fa-temperature-half"></i>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput tempOutput"> 23 C°</p>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-wind"></i>
-						</td>
-						<td>
-							<p class="dayForecastOutput windOutput">17 km/h</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput windOutput">14 km/h</p>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-umbrella"></i>
-						</td>
-						<td>
-							<p class="dayForecastOutput rainOutput">14%</p>
-						</td>
-					</tr>
-				</table>
-				<table class="table dayForecast">
-					<tr>
-						<td class="dayForecastHeader">
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput rainOutput">24%</p>
+						</div>
+					</div>
+					<div class="row dayForecastOutput">
+						<div class="col-md-3">
 							<h3 class="dayForecastHeaderDay">Friday</h3>
 							<h4 class="dayForecastHeaderDate">15 July, 2022</h4>
-						</td>
-						<td><i class="fa-solid fa-temperature-half"></i></td>
-						<td>
-							<p class="dayForecastOutput tempOutput"> 18 C°</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-1 dayForecastIco">
+							<i class="fa-solid fa-temperature-half"></i>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput tempOutput"> 23 C°</p>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-wind"></i>
-						</td>
-						<td>
-							<p class="dayForecastOutput windOutput">19 km/h</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput windOutput">14 km/h</p>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-umbrella"></i>
-						</td>
-						<td>
-							<p class="dayForecastOutput rainOutput">45%</p>
-						</td>
-					</tr>
-				</table>
-				<table class="table dayForecast">
-					<tr>
-						<td class="dayForecastHeader">
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput rainOutput">24%</p>
+						</div>
+					</div>
+					<div class="row dayForecastOutput">
+						<div class="col-md-3">
 							<h3 class="dayForecastHeaderDay">Saturday</h3>
 							<h4 class="dayForecastHeaderDate">16 July, 2022</h4>
-						</td>
-						<td><i class="fa-solid fa-temperature-half"></i></td>
-						<td>
-							<p class="dayForecastOutput tempOutput"> 22 C°</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-1 dayForecastIco">
+							<i class="fa-solid fa-temperature-half"></i>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput tempOutput"> 23 C°</p>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-wind"></i>
-						</td>
-						<td>
-							<p class="dayForecastOutput windOutput">04 km/h</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput windOutput">14 km/h</p>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-umbrella"></i>
-						</td>
-						<td>
-							<p class="dayForecastOutput rainOutput">12%</p>
-						</td>
-					</tr>
-				</table>
-				<table class="table dayForecast">
-					<tr>
-						<td class="dayForecastHeader">
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput rainOutput">24%</p>
+						</div>
+					</div>
+					<div class="row dayForecastOutput">
+						<div class="col-md-3">
 							<h3 class="dayForecastHeaderDay">Sunday</h3>
 							<h4 class="dayForecastHeaderDate">17 July, 2022</h4>
-						</td>
-						<td><i class="fa-solid fa-temperature-half"></i></td>
-						<td>
-							<p class="dayForecastOutput tempOutput"> 30 C°</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-1 dayForecastIco">
+							<i class="fa-solid fa-temperature-half"></i>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput tempOutput"> 23 C°</p>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-wind"></i>
-						</td>
-						<td>
-							<p class="dayForecastOutput windOutput">22 km/h</p>
-						</td>
-						<td>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput windOutput">14 km/h</p>
+						</div>
+						<div class="col-md-1 dayForecastIco">
 							<i class="fa-solid fa-umbrella"></i>
-						</td>
-						<td>
-							<p class="dayForecastOutput rainOutput">00%</p>
-						</td>
-					</tr>
-				</table>
+						</div>
+						<div class="col-md-2">
+							<p class="dayForecastOutput rainOutput">24%</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!--Developer-->
