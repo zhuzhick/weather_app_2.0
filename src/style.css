@@ -6,9 +6,9 @@ p {
 #weatherApp {
 	width: 480px;
 	min-width: 480px;
-	background-color: #ffff40;
 	margin: 20px auto;
 	padding: 16px;
+	background-color: #ffff40;
 	/*min-height: 640px;
 	max-height: 98vh;*/
 	font-family: "Comfortaa", cursive;
@@ -91,7 +91,9 @@ p {
 }
 
 #weatherIco {
-	width: 100px;
+	font-size: 124px;
+	display: block;
+	margin: 0 auto;
 }
 
 #currentTemp {

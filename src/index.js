@@ -48,14 +48,14 @@ function displayWeather(response) {
 	let currentDesc = document.querySelector("#currentWeatherDesc");
 	let currentWindSpeed = document.querySelector("#currentWindData");
 	let currentHumidity = document.querySelector("#currentHumidityData");
-	let weatherIco = document.querySelector("#weatherIco");
+
 	let userCityDisplay = document.querySelector("#userCity");
 
 	temperatureCesius = Math.round(response.data.main.temp);
 	let wind = Math.round(response.data.wind.speed);
 	let description = response.data.weather[0].description;
 	let humidity = response.data.main.humidity;
-
+	let ico = response.data.weather[0].main.toLowerCase();
 	userCityDisplay.innerHTML = response.data.name;
 	currentTemp.innerHTML = `${temperatureCesius}°C`;
 	currentDesc.innerHTML =
@@ -63,6 +63,7 @@ function displayWeather(response) {
 	currentWindSpeed.innerHTML = `: ${wind} km/h`;
 	currentHumidity.innerHTML = `: ${humidity} %`;
 
+	beautify(ico);
 	console.log(response.data);
 }
 
@@ -80,6 +81,46 @@ function userSearch(event) {
 	event.preventDefault();
 	let userCitySearch = document.querySelector("#searchFormInput");
 	searchForecast(userCitySearch.value);
+}
+
+function beautify(desc) {
+	let descVocablury = {
+		clear: {
+			classIco: "fa-sun",
+			bgcColor: "#ffff40",
+		},
+		clouds: {
+			classIco: "fa-cloud",
+			bgcColor: "#BA55D3",
+		},
+		drizzle: {
+			classIco: "fa-cloud-sun-rain",
+			bgcColor: "#87CEFA",
+		},
+		thunderstorm: {
+			classIco: "fa-cloud-bolt",
+			bgcColor: "#7FFFD4",
+		},
+		rain: {
+			classIco: "fa-cloud-sun-rain",
+			bgcColor: "#AFEEEE",
+		},
+		snow: {
+			classIco: "fa-snowflake",
+			bgcColor: "#F0F8FF",
+		},
+		mist: {
+			classIco: "fa-smog",
+			bgcColor: "#B0C4DE",
+		},
+	};
+
+	if (Object.keys(descVocablury).includes(desc)) {
+		let weatherApp = document.querySelector("#weatherApp");
+		let weatherIco = document.querySelector("#weatherIco");
+		weatherApp.style = `background-color: ${descVocablury[desc].bgcColor}`;
+		weatherIco.classList.add(descVocablury[desc].classIco);
+	}
 }
 
 //Toggle button C° to F°
