@@ -14,7 +14,7 @@ p {
 	font-family: "Comfortaa", cursive;
 }
 
-.currentTime {
+#currentTime {
 	font-size: 30px;
 }
 
@@ -73,24 +73,28 @@ p {
 	padding: 12px;
 }
 
-.userCity {
+#userCity {
 	font-size: 48px;
 	font-weight: 700;
 	padding: 0;
 	margin: 0;
 }
 
-.currentDay {
+#currentDay {
 	padding: 0;
 	margin: 0;
 }
 
-.currentDate {
+#currentDate {
 	padding: 0;
 	margin: 0;
 }
 
-.currentTemp {
+#weatherIco {
+	width: 100px;
+}
+
+#currentTemp {
 	font-size: 96px;
 	font-weight: 900;
 	padding: 0;

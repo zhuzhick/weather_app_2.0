@@ -31,7 +31,7 @@
 			<!--Current Timer & Degree Toggle-->
 			<div class="row">
 				<div class="col-md-6">
-					<div class="currentTime">
+					<div id="currentTime">
 						<p class="currentTimeOutPut"></p>
 					</div>
 				</div>
@@ -67,29 +67,37 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="cityData">
-						<h1 class="userCity">Paris</h1>
-						<p class="currentDay"></p>
-						<p class="currentDate"></p>
+						<h1 id="userCity">Let's know what's the weather</h1>
+						<p id="currentDay"></p>
+						<p id="currentDate"></p>
 					</div>
-					<div>
-						<p class="currentTemp"></p>
+				</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="cityTemp">
+						<p id="currentTemp"></p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="weatherIco">
+						<i id="weatherIco"></i>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<p id="currentWeatherDesc" class="currentWeatherInfo">It's rainy</p>
+					<p id="currentWeatherDesc" class="currentWeatherInfo"></p>
 				</div>
 			</div>	
 			<div class="row">
 				<div class="col-md-6">
 					<p class="currentWeatherData currentWind">
-							Wind: <span id="currentWindData">29 km/h</span>
+							Wind<span id="currentWindData"></span>
 					</p>
 				</div>
 				<div class="col-md-6">
 					<p class="currentWeatherData currentHumidity">
-							Humidity: <span id="currentHumidityData">48%</span>
+							Humidity<span id="currentHumidityData"></span>
 					</p>
 				</div>
 			</div>	
