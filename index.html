@@ -18,14 +18,17 @@
 			crossorigin="anonymous"
 		/>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 
-<body>
-	<div class="container" id="weatherApp">
-		<!--Current Timer & Degree Toggle-->
+	<body>
+		<div class="container" id="weatherApp">
+			<!--Current Timer & Degree Toggle-->
 			<div class="row">
 				<div class="col-md-6">
 					<div class="currentTime">
@@ -34,56 +37,63 @@
 				</div>
 				<div class="col-md-6">
 					<div class="degreeToggle">
-						<button id="degreeToggleBtn" class="btn">Convert to F°</button>
+						<button id="degreeToggleBtn" class="btn">
+							Convert to F°
+						</button>
 					</div>
 				</div>
+			</div>
+			<!--Search form-->
+			<div id="searchSection" class="row">
+				<div class="col-md-2 btnLocation">
+					<button id="btnLocation" class="btn">
+						<i class="fa-solid fa-location-dot"></i>
+					</button>
+				</div>
+				<div class="col-md-6 searchFormField">
+					<input
+						id="searchFormInput"
+						type="search"
+						placeholder="Search your city here"
+					/>
+				</div>
+				<div class="col-md-2 btnSearchCity">
+					<button id="btnSearchCity" class="btn">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</div>
+			</div>
+			<!--Today forecast-->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="cityData">
+						<h1 class="userCity">Paris</h1>
+						<p class="currentDay"></p>
+						<p class="currentDate"></p>
+					</div>
+					<div>
+						<p class="currentTemp"></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p id="currentWeatherDesc" class="currentWeatherInfo">It's rainy</p>
+				</div>
 			</div>	
-		<!--Search form-->
-		<div class="row">			
-			<div class="col-md-2 btnLocation">
-				<button id="btnLocation" class="btn"><i class="fa-solid fa-location-dot"></i></button>		
-			</div>
-			<div class="col-md-6 searchFormField">	
-				<input id="searchFormInput" type="search" placeholder="Search your city here"/>
-			</div>
-			<div class="col-md-2 btnSearchCity">
-				<button id="btnSearchCity" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-			</div>
-		</div>
-		<!--Today forecast-->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="cityData">
-					<h1 class="userCity">
-						
-					</h1>
-					<p class="currentDay"></p>
-					<p class="currentDate"></p>
+			<div class="row">
+				<div class="col-md-6">
+					<p class="currentWeatherData currentWind">
+							Wind: <span id="currentWindData">29 km/h</span>
+					</p>
 				</div>
-				<div>
-					<p class="currentTemp"></p>
+				<div class="col-md-6">
+					<p class="currentWeatherData currentHumidity">
+							Humidity: <span id="currentHumidityData">48%</span>
+					</p>
 				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6 ">
-				<div>
-					<p class="currentWeatherInfo">It's rainy</p>
-				</div>
-				<div>
-					<p class="currentWeatherData currentWind">Wind:<span>29 km/h</span></p>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div>
-					<p class="currentWeatherInfo currentRain">Rain: <span>12%</span></p>
-				</div>
-				<div>
-					<p class="currentWeatherData currentHumidity">Humidity:<span>48%</span></p>
-				</div>
-			</div>
-		</div>	
-		<!--Week forecast-->
+			</div>	
+			<!--Week forecast
 		<div class="row">
 			<div class="col-md-12">
 				<hr>
@@ -211,17 +221,27 @@
 				</div>
 			</div>
 		</div>
-		<!--Developer-->
-		<div class="row"></div>
-	</div>
+		-->
+			<!--Developer-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h5 class="developer">
+						<a href="https://github.com/zhuzhick/weather_app_2.0"
+							>Open-source code</a
+						>
+						by A.Holtseva
+					</h5>
+				</div>
+			</div>
+		</div>
 
-	<script src="src/index.js"></script>
+
+		<script src="src/index.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
 			crossorigin="anonymous"
 		></script>
-
-</body>
-
+	</body>
 </html>
