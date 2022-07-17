@@ -1,50 +1,49 @@
-let apiWeather = "4cd562128c73941b178c72243d5dc1c8";
-let urlWeather = "https://api.openweathermap.org/data/2.5/weather?q=";
-
 // Display current Date
-let days = [
-	"Sunday",
-	"Monday",
-	"Tuesday",
-	"Wednesday",
-	"Thursday",
-	"Friday",
-	"Saturday",
-];
-let months = [
-	"January",
-	"February",
-	"March",
-	"April",
-	"May",
-	"June",
-	"July",
-	"August",
-	"Semptember",
-	"October",
-	"November",
-	"December",
-];
+function currenDate() {
+	let days = [
+		"Sunday",
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday",
+	];
+	let months = [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"Semptember",
+		"October",
+		"November",
+		"December",
+	];
+	let now = new Date();
+	let currentDate = now.getDate();
+	let currentMonth = months[now.getMonth()];
+	let currentYear = now.getFullYear();
+	let currentDay = days[now.getDay()];
+	let day = document.querySelector(".currentDay");
+	let date = document.querySelector(".currentDate");
+	day.innerHTML = `${currentDay}`;
+	date.innerHTML = `${currentMonth} ${currentDate}, ${currentYear}`;
+}
 
-let now = new Date();
-let currentDate = now.getDate();
-let currentMonth = months[now.getMonth()];
-let currentYear = now.getFullYear();
-let currentDay = days[now.getDay()];
-let currentHours = now.getHours();
-let currentMin = now.getMinutes();
-let day = document.querySelector(".currentDay");
-let date = document.querySelector(".currentDate");
-let time = document.querySelector(".currentTime");
-
-day.innerHTML = `${currentDay}`;
-date.innerHTML = `${currentMonth} ${currentDate}, ${currentYear}`;
-time.innerHTML = `${currentHours}:${currentMin}`;
-
+function currentTime() {
+	let now = new Date();
+	let currentHours = now.getHours();
+	let currentMin = now.getMinutes();
+	let time = document.querySelector(".currentTime");
+	time.innerHTML = `${currentHours}:${currentMin}`;
+}
 
 // Search city and display forecast
 let btnSearch = document.querySelector("#btnSearchCity");
-
 
 function search(event) {
 	event.preventDefault();
@@ -52,25 +51,34 @@ function search(event) {
 	let userRequest = content.value.toLowerCase();
 	let userCityRequest =
 		userRequest.charAt(0).toUpperCase() + userRequest.slice(1);
-
-	weatherForecast(userCityRequest);
 }
 
-function weatherForecast(city) {
-	let userCityDisplay = document.querySelector(".userCity");
-	userCityDisplay.innerHTML = `${city}`;
+function displayWeather(response) {
+	//let userCityDisplay = document.querySelector(".userCity");
+	let currentTemp = document.querySelector(".currentTemp");
+	let currentDesc = document.querySelector("#currentWeatherDesc");
+	let currentWindSpeed = document.querySelector("#currentWindData");
+	let currentHumidity = document.querySelector("#currentHumidityData");
 
-	function displayWeather(response) {
-		let temp_C = Math.round(response.data.main.temp);
-		let currentTemp = document.querySelector(".currentTemp");
-		currentTemp.innerHTML = `${temp_C}°C`;
-	}
+	let temp_C = Math.round(response.data.main.temp);
+	let wind = Math.round(response.data.wind.speed);
+	let description = response.data.weather[0].description;
+	let humidity = response.data.main.humidity;
 
-	axios
-		.get(`${urlWeather}${city}&units=metric&appid=${apiWeather}`)
-		.then(displayWeather);
+	//userCityDisplay.innerHTML = `${city}`;
+	currentTemp.innerHTML = `${temp_C}°C`;
+	currentDesc.innerHTML =
+		description.charAt(0).toUpperCase() + description.slice(1);
+	currentWindSpeed.innerHTML = `${wind} km/h`;
+	currentHumidity.innerHTML = `${humidity} %`;
 }
 
+let apiWeather = "4cd562128c73941b178c72243d5dc1c8";
+let urlWeather = "https://api.openweathermap.org/data/2.5/weather?q=";
+
+axios
+	.get(`${urlWeather}paris&units=metric&appid=${apiWeather}`)
+	.then(displayWeather);
 
 //Toggle button C° to F°
 let convert_btn = document.querySelector("#degreeToggleBtn");
@@ -90,6 +98,9 @@ function convert() {
 		convert_btn.innerHTML = "Convert to F°";
 	}
 }
+
+currenDate();
+currentTime();
 
 convert_btn.addEventListener("click", convert);
 
