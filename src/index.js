@@ -83,6 +83,15 @@ function userSearch(event) {
 	searchForecast(userCitySearch.value);
 }
 
+function inputSearch(event) {
+	//event.preventDefault();
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		let userCitySearch = document.querySelector("#searchFormInput");
+		searchForecast(userCitySearch.value);
+	}
+}
+
 function beautify(desc) {
 	let descVocablury = {
 		clear: {
@@ -145,6 +154,9 @@ convert_btn.addEventListener("click", convert);
 
 let btnSearch = document.querySelector("#btnSearchCity");
 btnSearch.addEventListener("click", userSearch);
+
+let inputField = document.querySelector("#searchFormInput");
+inputField.addEventListener("keypress", inputSearch);
 
 currenDate();
 currentTime();
