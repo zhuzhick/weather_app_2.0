@@ -28,18 +28,11 @@
 
 	<body>
 		<div class="container colorAppBg" id="weatherApp">
-			<!--Current Timer & Degree Toggle-->
+			<!--Current Time-->
 			<div class="row">
 				<div class="col-md-6">
 					<div id="currentTime">
 						<p class="currentTimeOutPut"></p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="degreeToggle">
-						<button id="degreeToggleBtn" class="btn">
-							Convert to F°
-						</button>
 					</div>
 				</div>
 			</div>
@@ -72,15 +65,16 @@
 						<p id="currentDate"></p>
 					</div>
 				</div>
+			</div>	
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-7">
 					<div class="cityTemp">
 						<p id="currentTemp"></p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-5">
 					<div class="weatherIco">
-						<i id="weatherIco" class="fa-solid"></i>
+						<i id="weatherIco"></i>
 					</div>
 				</div>
 			</div>
@@ -91,156 +85,36 @@
 			</div>	
 			<div class="row">
 				<div class="col-md-6">
-					<p class="currentWeatherData currentWind">
+					<p class="currentWeatherData currentWind hide">
 							Wind<span id="currentWindData"></span>
 					</p>
 				</div>
 				<div class="col-md-6">
-					<p class="currentWeatherData currentHumidity">
+					<p class="currentWeatherData currentHumidity hide">
 							Humidity<span id="currentHumidityData"></span>
 					</p>
 				</div>
 			</div>	
-			<!--Week forecast
+			<!--Week forecast-->
 		<div class="row">
 			<div class="col-md-12">
 				<hr>
-				<div class="weekForecastOutput">
-					<div class="row dayForecastOutput">
-						<div class="col-md-3">
-							<h3 class="dayForecastHeaderDay">Wednesday</h3>
-							<h4 class="dayForecastHeaderDate">13 July, 2022</h4>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-temperature-half"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput tempOutput"> 23 C°</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-wind"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput windOutput">14 km/h</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-umbrella"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput rainOutput">24%</p>
-						</div>
-					</div>
-					<div class="row dayForecastOutput">
-						<div class="col-md-3">
-							<h3 class="dayForecastHeaderDay">Thursday</h3>
-							<h4 class="dayForecastHeaderDate">14 July, 2022</h4>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-temperature-half"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput tempOutput"> 23 C°</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-wind"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput windOutput">14 km/h</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-umbrella"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput rainOutput">24%</p>
-						</div>
-					</div>
-					<div class="row dayForecastOutput">
-						<div class="col-md-3">
-							<h3 class="dayForecastHeaderDay">Friday</h3>
-							<h4 class="dayForecastHeaderDate">15 July, 2022</h4>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-temperature-half"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput tempOutput"> 23 C°</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-wind"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput windOutput">14 km/h</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-umbrella"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput rainOutput">24%</p>
-						</div>
-					</div>
-					<div class="row dayForecastOutput">
-						<div class="col-md-3">
-							<h3 class="dayForecastHeaderDay">Saturday</h3>
-							<h4 class="dayForecastHeaderDate">16 July, 2022</h4>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-temperature-half"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput tempOutput"> 23 C°</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-wind"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput windOutput">14 km/h</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-umbrella"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput rainOutput">24%</p>
-						</div>
-					</div>
-					<div class="row dayForecastOutput">
-						<div class="col-md-3">
-							<h3 class="dayForecastHeaderDay">Sunday</h3>
-							<h4 class="dayForecastHeaderDate">17 July, 2022</h4>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-temperature-half"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput tempOutput"> 23 C°</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-wind"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput windOutput">14 km/h</p>
-						</div>
-						<div class="col-md-1 dayForecastIco">
-							<i class="fa-solid fa-umbrella"></i>
-						</div>
-						<div class="col-md-2">
-							<p class="dayForecastOutput rainOutput">24%</p>
-						</div>
-					</div>
+				<div id="weekForecastOutput">
+					
 				</div>
 			</div>
 		</div>
-		-->
+		
 			<!--Developer-->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h5 class="developer">
-						<a href="https://github.com/zhuzhick/weather_app_2.0"
-							>Open-source code</a
-						>
-						by A.Holtseva
-					</h5>
-				</div>
+		<div class="row">
+			<div class="col-md-12">
+				<hr class="hide">
+				<h5 class="developer">
+					<a href="https://github.com/zhuzhick/weather_app_2.0"
+						>Open-source code</a
+					>
+					by A.Holtseva
+				</h5>
 			</div>
 		</div>
 

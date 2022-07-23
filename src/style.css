@@ -58,7 +58,7 @@ p {
 }
 
 .searchFormField {
-	margin: 0 10px;
+	margin: 0 18px;
 }
 
 #btnSearchCity {
@@ -94,6 +94,7 @@ p {
 	font-size: 124px;
 	display: block;
 	margin: 0 auto;
+	padding: 0 0 0 12px;
 }
 
 #currentTemp {
@@ -118,10 +119,7 @@ p {
 .dayForecastHeaderDay {
 	font-size: 14px;
 	font-weight: 700;
-}
-
-.dayForecastHeaderDate {
-	font-size: 12px;
+	margin: 12px 0;
 }
 
 .dayForecastOutput {
@@ -134,19 +132,21 @@ p {
 	padding: 8px 4px;
 }
 
-.fa-solid {
-	display: block;
-	margin: 0 auto;
-	font-size: 20px;
-	font-weight: 100;
+.dayIco {
+	font-size: 28px;
+	padding: 0;
 }
 
 .developer {
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 }
 
 .developer a {
 	text-decoration: none;
 	color: black;
+}
+
+.hide {
+	display: none;
 }
